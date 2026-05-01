@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Make your move: Rock Paper Scissors </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<main class="container">
+    <h1> THE ARENA</h1>
+    <p class="subtitle">"Only one choice leads to survival."</p>
+
+    <section class="controls">
+        <p>Choose your move:</p>
+        <button data-choice="Rock">🪨 Rock</button>
+        <button data-choice="Paper">📄 Paper</button>
+        <button data-choice="Scissors">✂️ Scissors</button>
+    </section>
+
+    <section class="display">
+        <h2 id="choices">You vs. Computer</h2>
+        
+    </section>
+
+    <section class="scoreboard">
+        <p>Player: <span id="playerScore">0</span></p>
+        <p>Computer: <span id="computerScore">0</span></p>
+        <p>Draws: <span id="drawScore">0</span></p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+</html>
