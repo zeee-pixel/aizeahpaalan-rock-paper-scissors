@@ -47,10 +47,7 @@ function playGame(playerChoice) {
     choicesText.textContent = `You chose ${playerChoice} | Computer chose ${computerChoice}`;
     resultText.textContent = result;
 
-    document.getElementById("playerScore").textContent = playerScore;
-    document.getElementById("computerScore").textContent = computerScore;
-    document.getElementById("drawScore").textContent = drawScore;
-
+    
      if (playerScoreText) playerScoreText.textContent = playerScore;
      if (computerScoreText) computerScoreText.textContent = computerScore;
      if (drawScoreText) drawScoreText.textContent = drawScore;
