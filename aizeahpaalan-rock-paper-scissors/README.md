@@ -1,1 +1,0 @@
-# aizeahpaalan-rock-paper-scissors

@@ -7,6 +7,9 @@ let drawScore = 0;
 const buttons = document.querySelectorAll("button");
 const resultText = document.getElementById("result");
 const choicesText = document.getElementById("choices");
+const playerScoreText = document.getElementById("playerScore");
+const computerScoreText = document.getElementById("computerScore");
+const drawScoreText = document.getElementById("drawScore");
 
 // Event listeners for buttons
 buttons.forEach(button => {
@@ -18,7 +21,7 @@ buttons.forEach(button => {
 
 function playGame(playerChoice) {
     const choices = ["Rock", "Paper", "Scissors"];
-    const computerChoice = choices[Math.floor(Math.random() * 3)];
+     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
     let result;
 
@@ -47,12 +50,17 @@ function playGame(playerChoice) {
     document.getElementById("playerScore").textContent = playerScore;
     document.getElementById("computerScore").textContent = computerScore;
     document.getElementById("drawScore").textContent = drawScore;
+
+     if (playerScoreText) playerScoreText.textContent = playerScore;
+     if (computerScoreText) computerScoreText.textContent = computerScore;
+     if (drawScoreText) drawScoreText.textContent = drawScore;
 }
 
 function launchConfetti() {
-    confetti({
-        particleCount: 120,
-        spread: 70,
-        origin: { y: 0.6 }
-    });
+      if (typeof confetti === 'function')
+        confetti({
+            particleCount: 120,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
 }
